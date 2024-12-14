@@ -1,4 +1,5 @@
 ﻿using Snake;
+using System.Text;
 
 Coordinates gridDimensions = new Coordinates(50, 20);
 Coordinates snakeStart = new Coordinates(10, 1);
@@ -6,19 +7,20 @@ Coordinates snakeStart = new Coordinates(10, 1);
 Random rand = new Random();
 Coordinates applePos = new Coordinates(rand.Next(1, gridDimensions.X - 1), rand.Next(1, gridDimensions.Y - 1));
 
-int FrameRate = 100;
+int FrameRate = 150;
+int tailLength = 1;
+int score = 0;
 
 Direction currentDirection = Direction.Down;
 
 List<Coordinates> snakePosHistory = new List<Coordinates>();
-int tailLength = 1;
 
-int score = 0;
+
 
 while (true)
 {
-    Console.Clear();
-    Console.WriteLine($"Score: {score}");
+    StringBuilder buffer = new StringBuilder();
+    buffer.AppendLine($"Score: {score}");
     snakeStart.ApplyMovementDirection(currentDirection);
 
     for (int y = 0; y < gridDimensions.Y; y++)
@@ -29,25 +31,22 @@ while (true)
 
             if (snakeStart.Equals(currentCoordinates) || snakePosHistory.Contains(currentCoordinates))
             {
-                Console.Write("■");
+                buffer.Append("■");
             }
-
             else if (applePos.Equals(currentCoordinates))
             {
-                Console.Write("@");
+                buffer.Append("@");
             }
-
             else if (x == 0 || x == gridDimensions.X - 1 || y == 0 || y == gridDimensions.Y - 1)
             {
-                Console.Write("#");
+                buffer.Append("#");
             }
-
             else
             {
-                Console.Write(" ");
+                buffer.Append(" ");
             }
         }
-        Console.WriteLine();
+        buffer.AppendLine();
     }
 
     if (snakeStart.Equals(applePos))
@@ -56,7 +55,7 @@ while (true)
         score++;
         applePos = new Coordinates(rand.Next(1, gridDimensions.X - 1), rand.Next(1, gridDimensions.Y - 1));
     }
-    else if(snakeStart.X == 0 || snakeStart.X == gridDimensions.X - 1 || snakeStart.Y == 0 || snakeStart.Y == gridDimensions.Y - 1 || snakePosHistory.Contains(snakeStart))
+    else if (snakeStart.X == 0 || snakeStart.X == gridDimensions.X - 1 || snakeStart.Y == 0 || snakeStart.Y == gridDimensions.Y - 1 || snakePosHistory.Contains(snakeStart))
     {
         score = 0;
         tailLength = 1;
@@ -68,7 +67,7 @@ while (true)
 
     snakePosHistory.Add(new Coordinates(snakeStart.X, snakeStart.Y));
 
-    if(snakePosHistory.Count > tailLength)
+    if (snakePosHistory.Count > tailLength)
     {
         snakePosHistory.RemoveAt(0);
     }
@@ -97,4 +96,6 @@ while (true)
             }
         }
     }
+    Console.Clear();
+    Console.Write(buffer.ToString());
 }
