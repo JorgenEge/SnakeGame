@@ -36,9 +36,9 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Skole\\SideProjects\\SnakeGame\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T06:23:22.526Z",
+              "WhenOpened": "2024-12-14T06:51:00.807Z",
               "EditorCaption": ""
             },
             {
@@ -51,8 +51,7 @@
               "RelativeToolTip": "Coordinates.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T06:25:02.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T06:25:02.248Z"
             },
             {
               "$type": "Document",
@@ -62,7 +61,7 @@
               "RelativeDocumentMoniker": "Direction.cs",
               "ToolTip": "C:\\Skole\\SideProjects\\SnakeGame\\Direction.cs",
               "RelativeToolTip": "Direction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T06:25:01.402Z",
               "EditorCaption": ""

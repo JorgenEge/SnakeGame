@@ -2,7 +2,7 @@
 using System.Text;
 
 Coordinates gridDimensions = new Coordinates(50, 20);
-Coordinates snakeStart = new Coordinates(10, 1);
+Coordinates snakeStart = new Coordinates(10, 4);
 
 Random rand = new Random();
 Coordinates applePos = new Coordinates(rand.Next(1, gridDimensions.X - 1), rand.Next(1, gridDimensions.Y - 1));

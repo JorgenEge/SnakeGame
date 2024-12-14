@@ -26,3 +26,4 @@ C:\Skole\SideProjects\SnakeGame\obj\Debug\net8.0\refint\Snake.dll
 C:\Skole\SideProjects\SnakeGame\obj\Debug\net8.0\Snake.pdb
 C:\Skole\SideProjects\SnakeGame\obj\Debug\net8.0\Snake.genruntimeconfig.cache
 C:\Skole\SideProjects\SnakeGame\obj\Debug\net8.0\ref\Snake.dll
+C:\Skole\SideProjects\SnakeGame\obj\Debug\net8.0\Snake.sourcelink.json
